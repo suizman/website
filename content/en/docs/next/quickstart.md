@@ -4,7 +4,8 @@ weight: 900
 description: Get etcd up and running in less than 5 minutes!
 ---
 
-Follow the instructions below to locally install, run, and test a simple single-member cluster of etcd.
+Follow the instructions below to locally install, run, and test a simple
+single-member cluster of etcd.
 
 ## Install etcd
 
@@ -17,7 +18,7 @@ GOOGLE_URL=https://storage.googleapis.com/etcd
 GITHUB_URL=https://github.com/etcd-io/etcd/releases/download
 ```
 
-Download and install etcd:
+Download and install etcd from pre-built binaries:
 
 On Linux
 
@@ -49,6 +50,10 @@ unzip /tmp/etcd-${ETCD_VER}-darwin-amd64.zip -d /tmp
 ln -s /tmp/etcd-${ETCD_VER}-darwin-amd64/* /tmp/test-etcd
 ```
 
+{{% alert title="Note" color="info" %}}
+To work with the latest version, learn how to [build from the main branch](/docs/{{< param version >}}/dl-build/#build-the-latest-version).
+{{% /alert %}}
+
 ## Launch etcd
 
 Go to the download directory and launch etcd:
@@ -77,4 +82,22 @@ $ ./etcdctl get greeting
 greeting
 Hello, etcd
 ```
+
+## Next steps
+
+Now it's time to dig into the full etcd API and other guides.
+
+- Explore the full gRPC [API][api].
+- Set up a [multi-machine cluster][clustering].
+- Learn the [config format, env variables and flags][configuration].
+- Find [language bindings and tools][integrations].
+- Use TLS to [secure an etcd cluster][security].
+- [Tune etcd][tuning].
+
+[api]: /docs/{{< param version >}}/learning/api
+[clustering]: /docs/{{< param version >}}/op-guide/clustering
+[configuration]: /docs/{{< param version >}}/op-guide/configuration
+[integrations]: /docs/{{< param version >}}/integrations
+[security]: /docs/{{< param version >}}/op-guide/security
+[tuning]: /docs/{{< param version >}}/tuning
 
