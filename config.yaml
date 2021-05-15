@@ -175,8 +175,11 @@ outputs:
 # Site Menu
 menu:
   main:
+    - name: Quickstart
+      url: /docs/latest/quickstart/
+      weight: -20
     - name: Docs
-      url: /docs/v3.4/
+      url: /docs/latest/
       weight: -10
     - name: Blog
       url: /blog/
